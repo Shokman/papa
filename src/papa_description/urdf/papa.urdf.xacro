@@ -3,7 +3,14 @@
 
   <!-- ArloBot -->
   <!-- There is no actual ArloBot model, I never made one. -->
+
   <xacro:include filename="$(find papa_description)/urdf/arlo.urdf.xacro"/>
+  <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_common_library.urdf.xacro" />
+  <xacro:include filename="$(find turtlebot_description)/urdf/stacks/hexagons.urdf.xacro"/>
+  <xacro:include filename="$(find turtlebot_description)/urdf/sensors/kinect.urdf.xacro"/>
+
+  <kobuki/>
+  <sensor_kinect  parent="base_link"/>
 
   <arlo_base/>
 </robot>
